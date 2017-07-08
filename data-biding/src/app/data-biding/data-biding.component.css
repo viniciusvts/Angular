@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+    background-color: whitesmoke;
+}
+.alert-sucess {
+    background-color: green;
+}
+.alert-info {
+    background-color: blue;
+}
+.alert-warning {
+    background-color: yellow;
+}
+.alert-danger {
+    background-color: red;
+}

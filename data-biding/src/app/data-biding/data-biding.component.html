@@ -1,0 +1,40 @@
+<body>
+  <section class="property-binding">
+    <article>
+      <h3>Interpolation</h3>
+      <p>String interpolada: {{ url }}</p>
+      <p>Resultado de 1+1: {{ 1+1 }}</p>
+      <p>Resultado de 1+1 não é: {{ 1 + 1 + getValor() }}</p>
+      <p>Resultado de boolean: {{ getBoolean() }}</p>
+    </article>
+    <article>
+      <h3>Propriedade</h3>
+      <img [src]="getUrlImage" />
+      <img bind-src="getUrlImage" />
+      <img src="{{ getUrlImage }}" />
+    </article>
+    <article>
+      <h3>Class e Stile binding</h3>
+      <div>
+        Selecione uma classe:
+        <select #classe (change)="0">
+        <option value="alert-sucess">Sucesso</option>
+        <option value="alert-info">Info</option>
+        <option value="alert-warning">Warning</option>
+        <option value="alert-danger">Erro</option>
+      </select>
+        <br><br>
+
+        <div class="{{ classe.value }}">
+          texto que será colorido conforme a seleção
+        </div>
+        <br>
+        <div class="alert-danger"
+          [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+          texto que aparecerá somente em caso de erro
+        </div>
+
+      </div>
+    </article>
+  </section>
+</body>
