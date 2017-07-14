@@ -9,11 +9,12 @@
     </article>
     <article>
       <h3>Propriedade</h3>
-      <img [src]="getUrlImage" />
+      <img [src]="getUrlImage">
       <img bind-src="getUrlImage" />
       <img src="{{ getUrlImage }}" />
     </article>
-    <article>
+  </section>
+  <section class="class-style-biding">
       <h3>Class e Stile binding</h3>
       <div>
         Selecione uma classe:
@@ -43,6 +44,38 @@
           <option value="t3">3</option>
         </select>
         <div [class]="teste.value">texto</div>
+      </div>
+  </section>
+  <section class="event-biding">
+    <article>
+      <h3>event biding</h3>
+      <div>
+        <h5>botão</h5>
+        <button (click)="botaoClicado()"
+        class="btn btn-primary">
+          Me Clique!
+        </button>
+
+      <br>
+        <h5>campo</h5>
+      <input type="text"
+      (keyup)="onKeyUp($event)"
+      (keyup.enter)="salvarValor( $event.target.value )"
+      (blur)="salvarValor( campoInput.value )"
+      #campoInput>
+
+      <p>Valor digitado: {{ valorInput }}</p>
+      <p>Valor Salvo: {{ valorSalvo }}</p>
+
+      <h5>mouse</h5>
+      <span
+      (mouseover)="onMouseOver()"
+      (mouseout)="onMouseOut()"
+      [class.mouseover]="isMouseOver">
+        passe o mouse sobre aqui
+      </span>
+      <p>O mouse está sobre?</p>
+      <p>R: {{ isMouseOver }}</p>
       </div>
     </article>
   </section>

@@ -17,3 +17,7 @@ body {
 .t1 {
     background-color: red; 
 }
+.mouseover {
+    background-color: black;
+    color: white;
+}
