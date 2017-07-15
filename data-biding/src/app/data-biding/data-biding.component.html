@@ -102,10 +102,12 @@
         <input type="text" [(ngModel)]="nome"/>
 
         <h5>TwoWay com Objeto</h5>
-        <p>nome: </p>
-        <input type="text" [(ngModel)]="pessoa.nome">
-        <p>Idade: </p>
-        <input type="text" [(ngModel)]="pessoa.idade">
+        <p>
+          nome: 
+          <input type="text" [(ngModel)]="pessoa.nome">
+          Idade: 
+          <input type="text" [(ngModel)]="pessoa.idade">
+        </p>
         <p>O nome é: {{ pessoa.nome }} e a idade é: {{ pessoa.idade }}</p>
         <!--
           Foi necessário importar FormsModule de @angular/forms
