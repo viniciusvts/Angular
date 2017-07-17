@@ -1,19 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
-import { DataBidingComponent } from './data-biding/data-biding.component';
-import { CicloComponent } from './ciclo/ciclo.component';
+import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataBidingComponent,
-    CicloComponent
+    DiretivaNgifComponent
   ],
   imports: [
-    BrowserModule,
-    FormsModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
